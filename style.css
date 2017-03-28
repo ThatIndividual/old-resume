@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
 
 body {
-  background-color: #D0CFC5;
+  background-color: #232138;
 }
 
 header {
@@ -14,12 +23,16 @@ header {
 }
 
 h1 {
-  color: #141717;
+  color: #F8EEDA;
   font-family: "Poppins";
   font-size: 100px;
   font-weight: 700;
   margin: 0px;
-  text-shadow: 5px 10px rgba(0, 0, 0, 0.25);
+  text-shadow: 5px 10px #FF2C4B;
+}
+
+.highlight {
+  color: #F99820;
 }
 
 #firstName {
@@ -36,62 +49,87 @@ h1 {
 }
 
 #console {
-  background-color: #FDF6E3;
+  padding: 25px;
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 400px;
-  height: 300px;
-  border-radius: 5px;
-  border: 1px solid #657B83;
+  width: 350px;
+  height: 250px;
   z-index: 0;
-  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.25);
+  border: 1px solid #FF2C4B;
 }
 
-#menubar {
-  height: 25px;
-  background-color: #2F343F;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+#console p {
+  margin: 0px;
 }
 
 #content {
-  color: #268BD2;
+  color: #F8EEDA;
   font-family: "Inconsolata";
-  padding: 0px 10px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-@keyframes "blink" {
-  from, to { color: transparent; }
-  50% { color: #268BD2; }
+.typed-cursor{
+  color: #F8EEDA;
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
 }
 
-@-moz-keyframes blink {
-  from, to { color: transparent; }
-  50% { color: #268BD2; }
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
 }
 
-@-webkit-keyframes "blink" {
-  from, to { color: transparent; }
-  50% { color: #268BD2; }
+section {
+  position: relative;
+  border: 1px solid #FF2C4B;
+  color: #F8EEDA;
+  width: 600px;
+  padding: 25px;
+/*background-image: linear-gradient(20deg, rgb(214, 100, 40), rgba(46, 39, 173, 0.58), rgba(53, 74, 165, 0.6));*/
 }
 
-@-ms-keyframes "blink" {
-  from, to { color: transparent; }
-  50% { color: #268BD2; }
+#education {
+  margin-left: 100px;
 }
 
-@-o-keyframes "blink" {
-  from, to { color: transparent; }
-  50% { color: #268BD2; }
+section h1 {
+  position: absolute;
+  left: -75px;
+  top: 275px;
+  text-shadow: none;
+  font-size: 50px;
+  display: inline-block;
+  text-shadow: 2px 4px #FF2C4B;
 }
 
-#cursor {
- -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-   -ms-animation: 1s blink step-end infinite;
-    -o-animation: 1s blink step-end infinite;
-     animation: 1s blink step-end infinite;
+section .degreeName {
+  font-weight: 700;
+}
+
+section .left {
+  font-family: "Inconsolata";
+  text-align: right;
+  width: 200px;
+  float: left;
+}
+
+section .right {
+  font-family: "Inconsolata";
+  float: right;
+  width: 350px;
 }

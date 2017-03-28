@@ -2,16 +2,64 @@
 <html>
   <head>
     <link href="style.css" rel="stylesheet">
+    <script src="typed.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        Typed.new("#content", {
+          strings: ["> <span class=\"highlight\">self</span>-taught programmer^1000<br>> aspiring <span class=\"highlight\">web</span> developer^1000<br>> "],
+          startDelay: 500,
+          showCursor: true,
+          cursorChar: "_",
+          contentType: "html",
+          typeSpeed: 30
+        });
+      });
+    </script>
   </head>
   <body>
     <header>
       <h1><span id="firstName">Ionescu</span></br><span id="lastName">Gabriel</span></h1>
       <div id="console">
-        <div id="menubar"></div>
-        <div id="content">
-          <p> > self taught programmer</br> > aspiring web developer</br> > <span id="cursor">_</span></p>
-        </div>
+        <p><span id="content"></span></p>
       </div>
     </header>
+
+    <section id="education">
+      <h1>Education</h1>
+      <div class="degree clearfix">
+        <div class="left">
+          <p class="degreeName">Full Stack Web</br>Development Certification</p>
+          <p>freeCodeCamp</p>
+          <p>2017 - ongoing</p>
+        </div>
+        <div class="right">
+          <p>The self-paced curriculum involves 1,200 hours of <span class="highlight">interactive coding</span> challenges and <span class="highlight">web development projects</span>, plus 800 hours of contributing to <span class="highlight">open-source</span> projects for nonprofits and is constantly expanded by more challenges and projects.</p>
+        </div>
+      </div>
+
+      <div class="degree clearfix">
+        <div class="left">
+          <p class="degreeName">Behavioural Economics</p>
+          <p>University of Bucharest</p>
+          <p>2014 - 2016</p>
+        </div>
+        <div class="right">
+          <p>Study of the effects that cognitive (biases and heuristics) and social factors have on individual economic decisions and consequently how we can better adapt our economic models.</p>
+          <p>Courses include <span class="highlight">research methodology</span> in experimental economics and <span class="highlight">statistical analysis</span> using the <span class="highlight">R programming language</span> and package ecosystem.</p>
+        </div>
+      </div>
+
+      <div class="degree clearfix">
+        <div class="left">
+          <p class="degreeName">Psychology</p>
+          <p>University of Bucharest</p>
+          <p>2011 - 2014</p>
+        </div>
+        <div class="right">
+          <p>Study of cognitive functions and social behaviour. This includes <span class="highlight">research methodology</span>, univariate statistics and <span class="highlight">data analysis</span> using the <span class="highlight">SPSS</span> package.</p>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
