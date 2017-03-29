@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url('https://fonts.googleapis.com/css?family=Ultra');
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+@mixin animation($name, $time, $repeat) {
+  -webkit-animation: $name $time $repeat;
+     -moz-animation: $name $time $repeat;
+          animation: $name $time $repeat;
+}
+
+$light-cream: #F8EEDA;
+$taffy:       #FF2C4B;
+$deep-blue:   #232138;
+$amber:       #F99820;
+
+.highlight {
+  color: $amber;
+}
+
+body {
+  background-color: $deep-blue;
+}
+
+h1 {
+  color: $light-cream;
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+p {
+  color: $light-cream;
+  font-family: "Inconsolata";
+}
+
+header {
+  position: relative;
+  width: 700px;
+  height: 350px;
+  margin: 20px auto;
+  clear: both;
+
+  h1 {
+    font-size: 100px;
+    margin: 0px;
+    text-shadow: 5px 10px $taffy;
+
+    #firstName {
+      position: absolute;
+      top: 50px;
+      z-index: 1;
+    }
+
+    #lastName {
+      position: absolute;
+      top: 175px;
+      left: 150px;
+      z-index: 1;
+    }
+  }
+}
+
+#console {
+  padding: 25px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 350px;
+  height: 250px;
+  z-index: 0;
+  border: 1px solid $taffy;
+
+  p {
+    margin: 0px;
+  }
+}
+
+
+.typed-cursor{
+  color: $light-cream;
+  opacity: 1;
+  @include animation(blink, 0.7s, infinite);
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+section {
+  position: relative;
+  border: 1px solid #FF2C4B;
+  color: #F8EEDA;
+  width: 600px;
+  padding: 25px;
+/*background-image: linear-gradient(20deg, rgb(214, 100, 40), rgba(46, 39, 173, 0.58), rgba(53, 74, 165, 0.6));*/
+}
+
+#education {
+  margin-left: 100px;
+}
+
+section h1 {
+  position: absolute;
+  left: -75px;
+  top: 275px;
+  text-shadow: none;
+  font-size: 50px;
+  display: inline-block;
+  text-shadow: 2px 4px #FF2C4B;
+}
+
+section .degreeName {
+  font-weight: 700;
+}
+
+section .left {
+  font-family: "Inconsolata";
+  text-align: right;
+  width: 200px;
+  float: left;
+}
+
+section .right {
+  font-family: "Inconsolata";
+  float: right;
+  width: 350px;
+}
