@@ -18,6 +18,9 @@ section > div:after {
 body {
   background-color: #232138; }
 
+.container {
+  margin: 0px auto; }
+
 h1 {
   color: #F8EEDA;
   font-family: "Poppins";
@@ -114,14 +117,6 @@ section {
     width: 250px; }
     section#skills h1 {
       left: 200px; }
-  section#folio h1 {
-    position: static; }
-  section#folio .panel {
-    display: block;
-    width: 200px;
-    height: 310px; }
-    section#folio .panel#random-quote-machine {
-      background-image: url("random-quote-machine.png"); }
   section .left {
     font-family: "Inconsolata";
     text-align: right;
