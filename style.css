@@ -19,7 +19,8 @@ body {
   background-color: #232138; }
 
 .container {
-  margin: 0px auto; }
+  margin: 0px auto;
+  width: 1000px; }
 
 h1 {
   color: #F8EEDA;
