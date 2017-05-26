@@ -1,0 +1,1 @@
+Uses Typed.js, copyright of 2016, used under the MIT license.
