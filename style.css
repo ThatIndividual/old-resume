@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700");
+@import url("https://fonts.googleapis.com/css?family=Poppins:700");
 @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
-@import url("https://fonts.googleapis.com/css?family=Ultra");
 section > div:after {
   content: " ";
   /* Older browser do not support empty content */
